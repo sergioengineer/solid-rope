@@ -1,0 +1,43 @@
+.allowed_area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --diameter: 560px;
+
+  border-radius: var(--diameter);
+  border: 1px solid #333;
+  height: var(--diameter);
+  width: var(--diameter);
+  translate: -50% -50%;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #3333;
+  top: 50%;
+  width: 100vw;
+  translate: 0 -1px;
+}
+
+.panel::before {
+  position: absolute;
+  content: "";
+  border: 1px solid #3333;
+  left: 50%;
+  height: 100vh;
+  translate: -1px 0px;
+}
+
+.analytics {
+  display: flex;
+  position: absolute;
+  flex-flow: column;
+}
